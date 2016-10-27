@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/lbl_sales_order_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:paddingRight="6dp"
+        android:text="@string/ui_detail_sales_order_id" />
+
+    <TextView
+        android:id="@+id/sales_order_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/lbl_sales_order_id"
+        android:paddingRight="6dp" />
+
+    <TextView
+        android:id="@+id/lbl_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/lbl_sales_order_id"
+        android:text="@string/ui_detail_note" />
+
+    <TextView
+        android:id="@+id/note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/lbl_note" />
+
+    <TextView
+        android:id="@+id/lbl_note_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/lbl_note"
+        android:paddingRight="6dp"
+        android:text="@string/ui_detail_note_language" />
+
+    <TextView
+        android:id="@+id/note_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toRightOf="@id/lbl_note_language"
+        android:paddingRight="6dp" />
+
+    <TextView
+        android:id="@+id/lbl_currency_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbl_note_language"
+        android:hint="@string/ui_detail_currency_code" />
+
+    <TextView
+        android:id="@+id/currency_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/lbl_currency_code" />
+
+    <TextView
+        android:id="@+id/lbl_customer_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/lbl_currency_code"
+        android:paddingRight="6dp"
+        android:text="@string/ui_detail_customer_id" />
+
+    <TextView
+        android:id="@+id/customer_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toRightOf="@id/lbl_customer_id"
+        android:paddingRight="6dp" />
+
+    <TextView
+        android:id="@+id/lbl_customer_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbl_currency_code"
+        android:layout_toRightOf="@+id/lbl_customer_id"
+        android:hint="@string/ui_detail_customer_name" />
+
+    <TextView
+        android:id="@+id/customer_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/lbl_customer_name" />
+
+    <TextView
+        android:id="@+id/lbl_gross_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbl_note_language"
+        android:layout_toRightOf="@+id/lbl_currency_code"
+        android:hint="@string/ui_detail_gross_amount" />
+
+    <TextView
+        android:id="@+id/gross_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/lbl_gross_amount" />
+
+    <TextView
+        android:id="@+id/lbl_tax_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/lbl_note_language"
+        android:layout_toRightOf="@id/lbl_gross_amount"
+        android:paddingRight="6dp"
+        android:text="@string/ui_detail_tax_amount" />
+
+    <TextView
+        android:id="@+id/tax_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toRightOf="@id/lbl_tax_amount"
+        android:paddingRight="6dp" />
+
+    <TextView
+        android:id="@+id/lbl_net_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbl_note_language"
+        android:layout_toRightOf="@+id/lbl_tax_amount"
+        android:hint="@string/ui_detail_net_amount" />
+
+    <TextView
+        android:id="@+id/net_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/lbl_net_amount" />
+
+    <TextView
+        android:id="@+id/lbl_lifecycle_status_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/lbl_customer_id"
+        android:hint="@string/ui_detail_lifcycle_status"
+        android:paddingRight="6dp"
+        android:text="@string/ui_detail_lifecycle_status_description" />
+
+    <TextView
+        android:id="@+id/lifecycle_status_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toRightOf="@id/lbl_lifecycle_status_description"
+        android:paddingRight="6dp" />
+
+    <TextView
+        android:id="@+id/lbl_billing_status_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbl_lifecycle_status_description"
+        android:hint="@string/ui_detail_billing_status"
+        android:text="@string/ui_detail_billing_status_description"/>
+    <TextView
+        android:id="@+id/billing_status_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/lbl_billing_status_description" />
+
+    <TextView
+        android:id="@+id/lbl_delivery_status_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/lbl_billing_status_description"
+        android:paddingRight="6dp"
+        android:hint="@string/ui_detail_billing_status"
+        android:text="@string/ui_detail_delivery_status_description" />
+    <TextView
+        android:id="@+id/delivery_status_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toRightOf="@id/lbl_delivery_status_description"
+        android:paddingRight="6dp" />
+</RelativeLayout>

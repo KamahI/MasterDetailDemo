@@ -1,0 +1,1 @@
+include ':app', ':mafsettingscreen-1.213.4', ':mafuicomponents-1.213.4', ':maflogonui-1.213.4', ':MobilePlace-3.13.4'

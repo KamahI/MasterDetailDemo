@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('MobilePlace-3.13.4.aar'))
