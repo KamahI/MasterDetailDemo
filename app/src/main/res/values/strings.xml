@@ -3,8 +3,9 @@
            tools:ignore="MissingTranslation">
 
     <!--Name of app on Android device home screen-->
-    <string name="app_name">MasterDetail</string>
+    <string name="app_name">SalesOrderSet</string>
 
+    <string name="title_sales_order_list">Sales Order IDs</string>
     <string name="title_sales_order_detail">Sales Order Detail</string>
         <string name="action_settings">Settings</string>
 
@@ -32,27 +33,31 @@
     <string name="ui_init_callbackerror">Logon failed. isUserLoggedOn: %1$s, errorMessage: %1$s</string>
 
     <!--Strings for SalesOrder Detail Fragment-->
-    <string name="ui_detail_sales_order_id">Sales Order ID:</string>
-    <string name="ui_detail_note">Note:</string>
-    <string name="ui_detail_note_language">Note Language:</string>
-    <string name="ui_detail_customer_id">Customer ID:</string>
-    <string name="ui_detail_customer_name">Customer Name:</string>
-    <string name="ui_detail_currency_code">Currency Code:</string>
-    <string name="ui_detail_gross_amount">Gross Amount:</string>
-    <string name="ui_detail_net_amount">Net Amount</string>
-    <string name="ui_detail_tax_amount">Tax Amount:</string>
-    <string name="ui_detail_lifcycle_status">Lifecycle Status:</string>
-    <string name="ui_detail_lifecycle_status_description">Lifecycle Status Description:</string>
-    <string name="ui_detail_billing_status">Billing Status</string>
-    <string name="ui_detail_billing_status_description">Billing Status Description:</string>
-    <string name="ui_detail_delivery_status">Delivery Status</string>
-    <string name="ui_detail_delivery_status_description">Delivery Status Description:</string>
-    <string name="ui_detail_created_at">created at:</string>
-    <string name="ui_detail_changed_at">changed at:</string>
+    <string name="ui_detail_sales_order_id">Sales Order ID: </string>
+    <string name="ui_detail_note">Note: </string>
+    <string name="ui_detail_note_language">Note Language: </string>
+    <string name="ui_detail_customer_id">Customer ID: </string>
+    <string name="ui_detail_customer_name">Customer Name: </string>
+    <string name="ui_detail_currency_code">Currency Code: </string>
+    <string name="ui_detail_gross_amount">Gross Amount: </string>
+    <string name="ui_detail_net_amount">Net Amount: </string>
+    <string name="ui_detail_tax_amount">Tax Amount: </string>
+    <string name="ui_detail_lifcycle_status">Lifecycle Status: </string>
+    <string name="ui_detail_lifecycle_status_description">Lifecycle Status Description: </string>
+    <string name="ui_detail_billing_status">Billing Status: </string>
+    <string name="ui_detail_billing_status_description">Billing Status Description: </string>
+    <string name="ui_detail_delivery_status">Delivery Status: </string>
+    <string name="ui_detail_delivery_status_description">Delivery Status Description: </string>
+    <string name="ui_detail_created_at">created at: </string>
+    <string name="ui_detail_changed_at">changed at: </string>
 
     <!--Strings for SalesOrderDataSingleton-->
     <string name="unable_to_open_store">Unable to open OData Online Store</string>
     <string name="online_odata_store_exception">getSalesOrders: caught OnlineODataStoreException</string>
+    <string name="ui_detail_delivery_date">Delivery Date:</string>
+    <string name="ui_detail_quantity">Quantity:</string>
+    <string name="ui_detail_quantity_unit">Quantity Unit:</string>
+    <string name="ui_detail_item_position">Item Position</string>
 
 
 </resources>

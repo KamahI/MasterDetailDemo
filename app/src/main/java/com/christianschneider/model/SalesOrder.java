@@ -56,19 +56,19 @@ public class SalesOrder {
         str = str.concat(", Note = " + this.note);
         str = str.concat(", Note Language = " + this.noteLanguage);
         str = str.concat(", Customer ID = " + this.customerId);
-        str = str.concat(", Customer ID = " + this.customerName);
-        str = str.concat(", Customer ID = " + this.currencyCode);
-        str = str.concat(", Quantity per Unit = " + this.grossAmount);
-        str = str.concat(", Unit Price = " + this.netAmount);
-        str = str.concat(", Quantity per Unit = " + this.taxAmount);
-        str = str.concat(", Units In Stock = " + this.lifecycleStatus);
-        str = str.concat(", Units In Stock = " + this.lifecycleStatusDescription);
-        str = str.concat(", Units On Order = " + this.billingStatus);
-        str = str.concat(", Units On Order = " + this.billingStatusDescription);
-        str = str.concat(", Reorder Level = " + this.deliveryStatus);
-        str = str.concat(", Reorder Level = " + this.deliveryStatusDescription);
-        str = str.concat(", Discontinued = " + this.createdAt);
-        str = str.concat(", Discontinued = " + this.changedAt);
+        str = str.concat(", Customer Name = " + this.customerName);
+        str = str.concat(", Currency Code = " + this.currencyCode);
+        str = str.concat(", Gross Amount = " + this.grossAmount);
+        str = str.concat(", Net Amount = " + this.netAmount);
+        str = str.concat(", Tax Amount = " + this.taxAmount);
+        str = str.concat(", Life STatus = " + this.lifecycleStatus);
+        str = str.concat(", Life Descr = " + this.lifecycleStatusDescription);
+        str = str.concat(", Bill Status = " + this.billingStatus);
+        str = str.concat(", Bill Desc = " + this.billingStatusDescription);
+        str = str.concat(", Deliv STatus = " + this.deliveryStatus);
+        str = str.concat(", Deliv Desc = " + this.deliveryStatusDescription);
+        str = str.concat(", Created At = " + this.createdAt);
+        str = str.concat(", Changed AT = " + this.changedAt);
         Log.d(TAG, str);
     }
 
@@ -96,9 +96,6 @@ public class SalesOrder {
 
 
     //Getter and Setter methods
-    public String getSalesOrderID() {
-        return salesOrderId;
-    }
 
     public void setSalesOrderId(String salesOrderId) {
         this.salesOrderId = salesOrderId;

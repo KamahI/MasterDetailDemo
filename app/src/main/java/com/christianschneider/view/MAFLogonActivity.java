@@ -39,6 +39,7 @@ public class MAFLogonActivity extends AppCompatActivity implements LogonListener
     {
         super.onCreate(savedInstanceState);
 
+
         //Hide MobilePlace window
         SharedPreferences prefs = getSharedPreferences(LogonCore.PREFERENCE_FILE_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor pEditor = prefs.edit();

@@ -7,9 +7,9 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.christianschneider.model.SalesOrderDataSingleton;
 import com.christianschneider.masterdetaildemo.MasterDetailDemo;
 import com.christianschneider.masterdetaildemo.R;
+import com.christianschneider.model.SalesOrderItemDataSingleton;
 
 /**
  * A list fragment representing a list of Products. This fragment
@@ -20,7 +20,7 @@ import com.christianschneider.masterdetaildemo.R;
  * Activities containing this fragment MUST implement the {@link Callbacks}
  * interface.
  */
-public class SalesOrderListFragment extends ListFragment
+public class SalesOrderItemListFragment extends ListFragment
 {
 
     /**
@@ -70,13 +70,13 @@ public class SalesOrderListFragment extends ListFragment
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
-    public SalesOrderListFragment()
+    public SalesOrderItemListFragment()
     {
     }
 
     /**
      * Gets a reference to the Northwind app to retrieve the list data from the 
-     * SalesOrderDataSingleton.
+     * SalesOrderItemDataSingleton.
      * @param savedInstanceState app context
      */
     @Override
@@ -86,12 +86,12 @@ public class SalesOrderListFragment extends ListFragment
 
         MasterDetailDemo app = (MasterDetailDemo) getActivity().getApplication();
 
-        //Use the SalesOrderDataSingleton.listItems array to display list data
+        //Use the SalesOrderItemDataSingleton.listItems array to display list data
         setListAdapter(new ArrayAdapter<>(
                 getActivity(),
                 android.R.layout.simple_list_item_activated_1,
                 android.R.id.text1,
-                SalesOrderDataSingleton.listItems));
+                SalesOrderItemDataSingleton.listItems));
     }
 
     @Override
@@ -138,7 +138,7 @@ public class SalesOrderListFragment extends ListFragment
 
         // Notify the active callbacks interface (the activity, if the
         // fragment is attached to one) that an item has been selected.
-        mCallbacks.onItemSelected(SalesOrderDataSingleton.ITEMS.get(position).salesOrderId);
+        mCallbacks.onItemSelected(SalesOrderItemDataSingleton.ITEMS.get(position).note);
     }
 
     @Override

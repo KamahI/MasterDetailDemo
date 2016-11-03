@@ -27,4 +27,17 @@ class Collections {
     public static final String CREATED_AT = "CreatedAt";
     public static final String CHANGED_AT = "ChangedAt";
 
+    public static final String ITEM_POSITION = "ItemPosition";
+    public static final String PRODUCT_ID = "ProductID";
+    public static final String DELIVERY_DATE = "DeliveryDate";
+    public static final String QUANTATY = "Quantity";
+    public static final String QUANTITY_UNIT = "QuantityUnit";
+//    public static final String ITEM_NOTE = "Note";
+//    public static final String ITEM_NOTE_LANGUAGE = "NoteLanguage";
+//    public static final String ITEM_CURRENCY_CODE = "CurrencyCode";
+//    public static final String ITEM_GROSS_AMOUNT = "GrossAmount";
+//    public static final String ITEM_NET_AMOUNT = "NetAmount";
+//    public static final String ITEM_TAXAMOUNT = "TaxAmount";
+
+
 }

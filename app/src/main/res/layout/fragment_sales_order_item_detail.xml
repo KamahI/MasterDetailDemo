@@ -5,29 +5,11 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/lbl_sales_order_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:paddingRight="6dp"
-        android:text="@string/ui_detail_sales_order_id" />
-
-    <TextView
-        android:id="@+id/sales_order_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@id/lbl_sales_order_id"
-        android:paddingRight="6dp"
-        android:text="" />
-
-    <TextView
         android:id="@+id/lbl_note"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/lbl_sales_order_id"
+        android:layout_alignParentTop="true"
         android:paddingRight="6dp"
         android:text="@string/ui_detail_note" />
 
@@ -35,6 +17,7 @@
         android:id="@+id/note"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_below="@id/sales_order_id"
         android:layout_toRightOf="@+id/lbl_note"
         android:paddingRight="6dp"
@@ -59,11 +42,30 @@
         android:text="" />
 
     <TextView
-        android:id="@+id/lbl_currency_code"
+        android:id="@+id/lbl_item_position"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@id/lbl_note_language"
+        android:paddingRight="6dp"
+        android:text="@string/ui_detail_item_position" />
+
+    <TextView
+        android:id="@+id/item_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/note"
+        android:layout_toRightOf="@id/lbl_item_position"
+        android:paddingRight="6dp"
+        android:text="" />
+
+
+    <TextView
+        android:id="@+id/lbl_currency_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/lbl_item_position"
         android:hint="@string/ui_detail_currency_code"
         android:paddingRight="6dp" />
 
@@ -71,7 +73,7 @@
         android:id="@+id/currency_code"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/note_language"
+        android:layout_below="@id/item_position"
         android:layout_toRightOf="@id/lbl_currency_code"
         android:paddingRight="6dp"
         android:text="" />
@@ -131,93 +133,57 @@
         android:text="" />
 
     <TextView
-        android:id="@+id/lbl_customer_id"
+        android:id="@+id/lbl_delivery_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@id/lbl_net_amount"
         android:paddingRight="6dp"
-        android:text="@string/ui_detail_customer_id" />
+        android:text="@string/ui_detail_delivery_date" />
 
     <TextView
-        android:id="@+id/customer_id"
+        android:id="@+id/delivery_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/net_amount"
-        android:layout_toRightOf="@id/lbl_customer_id"
+        android:layout_toRightOf="@id/lbl_delivery_date"
         android:paddingRight="6dp"
         android:text="" />
 
     <TextView
-        android:id="@+id/lbl_customer_name"
+        android:id="@+id/lbl_quantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/net_amount"
         android:layout_toRightOf="@id/customer_id"
         android:paddingRight="6dp"
-        android:text="@string/ui_detail_customer_name" />
+        android:text="@string/ui_detail_quantity" />
 
     <TextView
-        android:id="@+id/customer_name"
+        android:id="@+id/quantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/net_amount"
-        android:layout_toRightOf="@+id/lbl_customer_name"
+        android:layout_toRightOf="@+id/lbl_quantity"
         android:paddingRight="6dp"
         android:text="" />
 
 
     <TextView
-        android:id="@+id/lbl_lifecycle_status_description"
+        android:id="@+id/lbl_quantity_unit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@id/lbl_customer_name"
+        android:layout_below="@id/lbl_quantity"
         android:paddingRight="6dp"
-        android:text="@string/ui_detail_lifecycle_status_description" />
+        android:text="@string/ui_detail_quantity_unit" />
 
     <TextView
-        android:id="@+id/lifecycle_status_description"
+        android:id="@+id/quantity_unit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/customer_name"
+        android:layout_below="@id/quantity"
         android:layout_toRightOf="@id/lbl_lifecycle_status_description"
-        android:paddingRight="6dp"
-        android:text="" />
-
-    <TextView
-        android:id="@+id/lbl_billing_status_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@id/lbl_lifecycle_status_description"
-        android:paddingRight="6dp"
-        android:text="@string/ui_detail_billing_status_description" />
-
-    <TextView
-        android:id="@+id/billing_status_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/lifecycle_status_description"
-        android:layout_toRightOf="@id/lbl_billing_status_description"
-        android:paddingRight="6dp"
-        android:text="" />
-
-    <TextView
-        android:id="@+id/lbl_delivery_status_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@id/lbl_billing_status_description"
-        android:paddingRight="6dp"
-        android:text="@string/ui_detail_delivery_status_description" />
-
-    <TextView
-        android:id="@+id/delivery_status_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/billing_status_description"
-        android:layout_toRightOf="@id/lbl_delivery_status_description"
         android:paddingRight="6dp"
         android:text="" />
 

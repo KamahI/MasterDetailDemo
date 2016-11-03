@@ -3,6 +3,7 @@ package com.christianschneider.view;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.ActionBarActivity;
 
 import com.christianschneider.masterdetaildemo.R;
 
@@ -23,7 +24,7 @@ import com.christianschneider.masterdetaildemo.R;
  * {@link SalesOrderListFragment.Callbacks} interface
  * to listen for item selections.
  */
-public class SalesOrderListActivity extends FragmentActivity
+public class SalesOrderListActivity extends ActionBarActivity
         implements SalesOrderListFragment.Callbacks
 {
 
@@ -38,6 +39,7 @@ public class SalesOrderListActivity extends FragmentActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sales_order_list);
+
 
         if (findViewById(R.id.sales_order_detail_container) != null)
         {
