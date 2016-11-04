@@ -29,7 +29,8 @@ public class SalesOrderDataSingleton
     private static final String TAG = "SalesOrderDataSingleton";
     private static SalesOrderDataSingleton instance;
     private static Context appContext;
-    private static int entityRow = 0;
+    private static int skipValue = 0;
+    private static ArrayList<SalesOrder> pList = new ArrayList<>();
 
     /** ODataOnlineManager */
     ODataOnlineManager odataOnlineManager = new ODataOnlineManager();
@@ -143,9 +144,9 @@ public class SalesOrderDataSingleton
      * @throws OnlineODataStoreException Thrown for errors in OData communication
      * @see SalesOrder
      */
-    private static ArrayList<SalesOrder> getSalesOrderSets() throws OnlineODataStoreException
+    public static ArrayList<SalesOrder> getSalesOrderSets() throws OnlineODataStoreException
     {
-        ArrayList<SalesOrder> pList = new ArrayList<>();
+
 
         //Get the open online store
         ODataOpenListener openListener = ODataOpenListener.getInstance();
@@ -185,7 +186,7 @@ public class SalesOrderDataSingleton
                  */
 
                 // Build initial resource path and query options string
-                resourcePath = Collections.SALES_ORDER_SET + "?$orderby=" + Collections.SALES_ORDER_ID;
+                resourcePath = Collections.SALES_ORDER_SET + "?$top=5&$skip=" + skipValue + "&$orderby=" + Collections.SALES_ORDER_ID;
                 // Loop until resourcePath is null
                 Log.d("resourcePath", resourcePath);
 //                do
@@ -199,7 +200,7 @@ public class SalesOrderDataSingleton
                     ODataEntitySet feed = (ODataEntitySet) resp.getPayload();
 
                     //Get the list of ODataEntity
-                    List<ODataEntity> entities = feed.getEntities().subList(entityRow,entityRow+1);
+                    List<ODataEntity> entities = feed.getEntities();
 
                     //Loop to retrieve the information from the response and store in the SalesOrder Object
                     for (ODataEntity entity : entities)
@@ -255,11 +256,10 @@ public class SalesOrderDataSingleton
                         SalesOrderItemDataSingleton.initialize(openListener, salesOrder);
 
                     }
-                entityRow += 1;
 
                     // Get the next resource path from the OData SDK. The call to getNextResourcePath()
                     // will return the appropriate string based on the server's skiptoken value.
-                    resourcePath = feed.getNextResourcePath();
+                   // resourcePath = feed.getNextResourcePath();
 
 //                }
                 // Short circuit evaluation of the string to see if we should loop again.
@@ -273,6 +273,7 @@ public class SalesOrderDataSingleton
 
                 // Store all items in ITEMS (ArrayList) in ITEM_MAP (HashMap) for rapid retrieval
                 storeData();
+                skipValue += 5;
 
             }
             catch (Exception e)

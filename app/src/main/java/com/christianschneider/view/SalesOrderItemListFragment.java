@@ -92,6 +92,7 @@ public class SalesOrderItemListFragment extends ListFragment
                 android.R.layout.simple_list_item_activated_1,
                 android.R.id.text1,
                 SalesOrderItemDataSingleton.listItems));
+
     }
 
     @Override

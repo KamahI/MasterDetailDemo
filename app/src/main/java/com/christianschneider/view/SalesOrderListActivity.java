@@ -4,8 +4,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
+import android.view.View;
+import android.widget.Button;
+import android.view.View.OnClickListener;
 
 import com.christianschneider.masterdetaildemo.R;
+import com.christianschneider.model.SalesOrder;
+import com.christianschneider.model.SalesOrderDataSingleton;
+import com.christianschneider.services.OnlineODataStoreException;
+
+import java.util.ArrayList;
 
 
 /**
@@ -28,6 +36,7 @@ public class SalesOrderListActivity extends ActionBarActivity
         implements SalesOrderListFragment.Callbacks
 {
 
+    Button button;
     /**
      * Whether or not the activity is in two-pane mode, i.e. running on a tablet
      * device.
@@ -39,7 +48,20 @@ public class SalesOrderListActivity extends ActionBarActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sales_order_list);
-
+        button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ArrayList<SalesOrder> helpList = new ArrayList<>();
+                try {
+                    helpList = SalesOrderDataSingleton.getSalesOrderSets();
+                } catch (OnlineODataStoreException e) {
+                    e.printStackTrace();
+                }
+                finish();
+                startActivity(getIntent());
+            }
+        });
 
         if (findViewById(R.id.sales_order_detail_container) != null)
         {
