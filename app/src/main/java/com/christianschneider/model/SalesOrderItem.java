@@ -16,7 +16,7 @@ public class SalesOrderItem {
     private String salesOrderId;
     private String itemPosition;
     private String productID;
-    public String note;
+    private String note;
     private String noteLanguage;
     private String currencyCode;
     private String grossAmount;
@@ -25,6 +25,7 @@ public class SalesOrderItem {
     private String deliveryDate;
     private String quantity;
     private String quantityUnit;
+    public String key;
 
     /**
      * Helper method to log the attributes of a SalesOrder object
@@ -65,6 +66,7 @@ public class SalesOrderItem {
     public SalesOrderItem(String note) {
         super();
         this.note = note;
+        this.key = salesOrderId + itemPosition;
     }
 
     public String getItemPosition() {

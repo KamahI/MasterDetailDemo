@@ -25,12 +25,25 @@
 
         </activity>
         <activity
+            android:name="com.christianschneider.view.SalesOrderItemListActivity"
+            android:label="@string/title_sales_order_item_list">
+
+        </activity>
+        <activity
             android:name="com.christianschneider.view.SalesOrderDetailActivity"
             android:label="@string/title_sales_order_detail"
             android:parentActivityName="com.christianschneider.view.SalesOrderListActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.christianschneider.view.SalesOrderListActivity" />
+        </activity>
+        <activity
+            android:name="com.christianschneider.view.SalesOrderItemDetailActivity"
+            android:label="@string/title_sales_order_item_detail"
+            android:parentActivityName="com.christianschneider.view.SalesOrderItemListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.christianschneider.view.SalesOrderItemListActivity" />
         </activity>
         <activity
             android:name="com.christianschneider.view.MAFLogonActivity"

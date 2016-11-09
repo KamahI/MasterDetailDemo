@@ -4,6 +4,7 @@ package com.christianschneider.model;
 import android.util.Log;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * SalesOrder object structured to match the Northwind OData service
@@ -46,6 +47,7 @@ public class SalesOrder {
     private String deliveryStatusDescription;
     private String createdAt;
     private String changedAt;
+    private List<SalesOrderItem> salesOrderItems;
 
 
     /**
@@ -96,6 +98,15 @@ public class SalesOrder {
 
 
     //Getter and Setter methods
+
+
+    public List<SalesOrderItem> getSalesOrderItems() {
+        return salesOrderItems;
+    }
+
+    public void setSalesOrderItems(List<SalesOrderItem> salesOrderItems) {
+        this.salesOrderItems = salesOrderItems;
+    }
 
     public void setSalesOrderId(String salesOrderId) {
         this.salesOrderId = salesOrderId;
